@@ -37,7 +37,7 @@ const { post, related, newer, older } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} type="article">
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.cover} type="article">
   <div class="reading-progress" data-reading-progress></div>
   <article class="article-shell">
     <header class="article-header">
@@ -51,6 +51,12 @@ const { Content } = await render(post);
         {post.data.updatedDate && <><span>·</span><span>更新于 {formatDate(post.data.updatedDate)}</span></>}
       </div>
     </header>
+
+    {post.data.cover && (
+      <figure class="article-cover">
+        <img src={post.data.cover} alt={`${post.data.title} 封面`} loading="eager" decoding="async" />
+      </figure>
+    )}
 
     <div class="prose">
       <Content />
@@ -98,3 +104,4 @@ const { Content } = await render(post);
     updateProgress();
   </script>
 </BaseLayout>
+

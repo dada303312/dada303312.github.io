@@ -11,7 +11,12 @@ interface Props {
 const { post, featured = false, index } = Astro.props;
 ---
 
-<article class:list={['post-card', { 'post-card-featured': featured }]}>
+<article class:list={['post-card', { 'post-card-featured': featured, 'has-cover': post.data.cover }]}>
+  {post.data.cover && (
+    <a class="post-card-cover" href={postHref(post)} tabindex="-1" aria-hidden="true">
+      <img src={post.data.cover} alt="" loading="lazy" decoding="async" />
+    </a>
+  )}
   {featured && (
     <div class="featured-label">
       <span class="status-dot"></span>
@@ -36,3 +41,4 @@ const { post, featured = false, index } = Astro.props;
     </a>
   </div>
 </article>
+
