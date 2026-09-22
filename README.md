@@ -58,6 +58,15 @@ pnpm sanitize
 
 该脚本会检查 `src/content`、`src/data` 和 `.pages.yml`，既避免隐藏字符进入最终网站，也不会牺牲编辑器中的换行效果。
 
+### 新文章文件名
+
+Pages CMS 会自动为新文章生成类似下面的文件名：
+
+```text
+2026-09-22-173045.md
+```
+
+这样即使文章标题是中文，也不会因为英文 slug 为空而导致扩展名错误。创建文章时可以修改这个文件名，建议改成简短英文地址，例如 `my-first-note.md`。
 ## 第一步：改成你自己的信息
 
 除了使用 Pages CMS，也可以手动修改 `src/data/site.json`：
@@ -185,6 +194,7 @@ blog.example.com
 - Open Graph / SEO 基础信息
 - GitHub Pages 自动构建与部署
 - Pages CMS 可视化文章和网站设置管理
+
 
 
 

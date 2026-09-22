@@ -95,7 +95,9 @@ content:
     type: collection
     path: src/content/blog
     format: yaml-frontmatter
-    filename: "{primary}.md"
+    filename:
+      template: "{year}-{month}-{day}-{hour}{minute}{second}.md"
+      field: create
     view:
       primary: title
       sort:
@@ -161,6 +163,7 @@ content:
           path: public/images/blog
           rename: safe
           switcher: true
+
 
 
 
