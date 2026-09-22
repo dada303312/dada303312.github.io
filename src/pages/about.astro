@@ -21,7 +21,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2>我正在做什么</h2>
           <p>持续学习，保持好奇，尝试把复杂的事情讲简单。也希望这些公开的文字，能给偶然路过的你带来一点启发、一点陪伴，或者只是一种“原来不止我这样想”的安心。</p>
           <h2>关于这个博客</h2>
-          <p>网站使用 Astro 构建，内容以 Markdown 保存，通过 GitHub Pages 免费发布。没有广告，不做追踪，支持深色模式与 RSS 订阅。</p>
+          <p>网站使用 Astro 构建，内容以 Markdown 保存，通过 GitHub Pages 免费发布。没有广告，不做追踪，支持深色模式。</p>
           <h2>联系我</h2>
           <p>如果你想交流文章中的观点，或者只是想打个招呼，可以给我发邮件，也可以在 GitHub 上找到我。</p>
         </div>
@@ -46,9 +46,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p>{SITE.tagline}</p>
         <div class="about-links">
           {SITE.social.map((item) => <a href={item.href}><span>{item.label}</span><span aria-hidden="true">↗</span></a>)}
-          <a href="/rss.xml"><span>RSS 订阅</span><span aria-hidden="true">↗</span></a>
         </div>
       </aside>
     </div>
   </div>
 </BaseLayout>
+
