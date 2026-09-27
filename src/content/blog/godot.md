@@ -150,4 +150,4 @@ cover: /images/covers/geminigeneratedimageffdsikffdsikffds.jpg
 
 这篇关于引擎与类幸存者玩法的记录，已经延伸到实际游戏原型的搭建与运行验证。完整的开发进度、运行截图、代码结构和阶段边界见：
 
-**[像素风幸存者：从零到可运行原型 →](/posts/godot-survivors-prototype/)**
+**[开发日志：把 Godot 幸存者原型的核心循环跑通 →](/posts/godot-survivors-prototype/)**
