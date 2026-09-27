@@ -144,6 +144,10 @@ cover: /images/covers/geminigeneratedimageffdsikffdsikffds.jpg
 
 # 基于Godot游戏引擎平台独立开发的类幸存者横版设计游戏的过程与思考
 
-
-
 &nbsp;
+
+## 开发进度续记
+
+这篇关于引擎与类幸存者玩法的记录，已经延伸到实际游戏原型的搭建与运行验证。完整的开发进度、运行截图、代码结构和阶段边界见：
+
+**[像素风幸存者：从零到可运行原型 →](/posts/godot-survivors-prototype/)**

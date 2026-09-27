@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#1c2333"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d6cdf"/><stop offset="1" stop-color="#1e4fa7"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e94b5f"/><stop offset="1" stop-color="#a72f43"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23b8bd"/><stop offset="1" stop-color="#14777d"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efb83b"/><stop offset="1" stop-color="#9d6c16"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1400" height="900" rx="30" fill="url(#bg)"/>
+  <text x="70" y="76" fill="#f8fafc" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="36" font-weight="700">当前工程结构：场景、脚本与运行时信号</text>
+  <text x="70" y="112" fill="#94a3b8" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="18">依据 6 个 GDScript、6 个场景和 project.godot 的实际依赖关系整理</text>
+  <text x="70" y="157" fill="#cbd5e1" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">启动层</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="180" width="330" height="120" rx="18" fill="#182033" stroke="#3b82f6" stroke-width="2"/>
+    <text x="96" y="218" fill="#93c5fd" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">main.tscn</text>
+    <text x="96" y="250" fill="#e2e8f0" font-family="Microsoft YaHei, sans-serif" font-size="17">主场景 + Camera2D + SpawnTimer</text>
+    <text x="96" y="278" fill="#94a3b8" font-family="Microsoft YaHei, sans-serif" font-size="15">窗口 640×360，viewport 拉伸</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="535" y="180" width="330" height="120" rx="18" fill="#182033" stroke="#64748b"/>
+    <text x="561" y="218" fill="#e2e8f0" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">main.gd</text>
+    <text x="561" y="250" fill="#cbd5e1" font-family="Microsoft YaHei, sans-serif" font-size="17">监听计时器信号</text>
+    <text x="561" y="278" fill="#94a3b8" font-family="Microsoft YaHei, sans-serif" font-size="15">每 0.6s 在屏幕外环形区域生成敌人</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1000" y="180" width="330" height="120" rx="18" fill="#182033" stroke="#64748b"/>
+    <text x="1026" y="218" fill="#e2e8f0" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">SpawnTimer</text>
+    <text x="1026" y="250" fill="#cbd5e1" font-family="Microsoft YaHei, sans-serif" font-size="17">autostart = true</text>
+    <text x="1026" y="278" fill="#94a3b8" font-family="Microsoft YaHei, sans-serif" font-size="15">半径 380～450 px</text>
+  </g>
+  <path d="M400 240 H525" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M865 240 H990" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="70" y="363" fill="#cbd5e1" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">战斗与成长层</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="390" width="280" height="180" rx="18" fill="url(#red)"/>
+    <text x="96" y="429" fill="#fff" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">player.gd</text>
+    <text x="96" y="462" fill="#ffe4e6" font-family="Microsoft YaHei, sans-serif" font-size="16">移动速度 180</text>
+    <text x="96" y="491" fill="#ffe4e6" font-family="Microsoft YaHei, sans-serif" font-size="16">每 0.4s 自动射击最近敌人</text>
+    <text x="96" y="520" fill="#ffe4e6" font-family="Microsoft YaHei, sans-serif" font-size="16">XP / 等级 / 升级弹窗</text>
+    <text x="96" y="549" fill="#fecdd3" font-family="Microsoft YaHei, sans-serif" font-size="14">Area2D 拾取经验</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="460" y="390" width="280" height="180" rx="18" fill="url(#gold)"/>
+    <text x="486" y="429" fill="#fff" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">bullet.gd</text>
+    <text x="486" y="462" fill="#fff7e6" font-family="Microsoft YaHei, sans-serif" font-size="16">速度 350</text>
+    <text x="486" y="491" fill="#fff7e6" font-family="Microsoft YaHei, sans-serif" font-size="16">基础伤害 10</text>
+    <text x="486" y="520" fill="#fff7e6" font-family="Microsoft YaHei, sans-serif" font-size="16">击退 160，3s 自动销毁</text>
+    <text x="486" y="549" fill="#ffedd5" font-family="Microsoft YaHei, sans-serif" font-size="14">Area2D → body_entered</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="850" y="390" width="280" height="180" rx="18" fill="url(#cyan)"/>
+    <text x="876" y="429" fill="#fff" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">enemy.gd</text>
+    <text x="876" y="462" fill="#ecfeff" font-family="Microsoft YaHei, sans-serif" font-size="16">追击速度 80</text>
+    <text x="876" y="491" fill="#ecfeff" font-family="Microsoft YaHei, sans-serif" font-size="16">生命值 20</text>
+    <text x="876" y="520" fill="#ecfeff" font-family="Microsoft YaHei, sans-serif" font-size="16">击退摩擦 600</text>
+    <text x="876" y="549" fill="#cffafe" font-family="Microsoft YaHei, sans-serif" font-size="14">受击闪白 + 伤害数字</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1160" y="407" width="170" height="146" rx="18" fill="#182033" stroke="#22c55e" stroke-width="2"/>
+    <text x="1184" y="447" fill="#86efac" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">exp_gem.gd</text>
+    <text x="1184" y="480" fill="#dcfce7" font-family="Microsoft YaHei, sans-serif" font-size="15">Area2D</text>
+    <text x="1184" y="508" fill="#dcfce7" font-family="Microsoft YaHei, sans-serif" font-size="15">每颗 1 XP</text>
+    <text x="1184" y="536" fill="#bbf7d0" font-family="Microsoft YaHei, sans-serif" font-size="14">加入 gem 组</text>
+  </g>
+  <path d="M350 480 H450" stroke="#f8fafc" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M740 480 H840" stroke="#f8fafc" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1130 480 H1150" stroke="#f8fafc" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1245 407 C1245 305 250 305 210 390" fill="none" stroke="#86efac" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+  <text x="682" y="334" fill="#86efac" font-family="Microsoft YaHei, sans-serif" font-size="15">击杀掉落 → 进入 PickupArea → gain_xp()</text>
+  <text x="70" y="638" fill="#cbd5e1" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">升级与选择层</text>
+  <g filter="url(#shadow)">
+    <rect x="310" y="670" width="360" height="150" rx="18" fill="#182033" stroke="#a855f7" stroke-width="2"/>
+    <text x="338" y="711" fill="#d8b4fe" font-family="Consolas, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">level_up_ui.tscn / .gd</text>
+    <text x="338" y="744" fill="#e9d5ff" font-family="Microsoft YaHei, sans-serif" font-size="16">暂停游戏，展示三个升级按钮</text>
+    <text x="338" y="773" fill="#c4b5fd" font-family="Microsoft YaHei, sans-serif" font-size="15">移动 ×1.10　伤害 ×1.15　攻速间隔 ×0.90</text>
+    <text x="338" y="800" fill="#a1a1aa" font-family="Microsoft YaHei, sans-serif" font-size="14">process_mode = Always，操作不受暂停影响</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="750" y="670" width="360" height="150" rx="18" fill="#182033" stroke="#f59e0b" stroke-width="2"/>
+    <text x="778" y="711" fill="#fcd34d" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="700">数值直接回写 Player</text>
+    <text x="778" y="744" fill="#fef3c7" font-family="Microsoft YaHei, sans-serif" font-size="16">speed / current_damage / attack_interval</text>
+    <text x="778" y="773" fill="#fde68a" font-family="Microsoft YaHei, sans-serif" font-size="15">选择后解除暂停并销毁弹窗</text>
+    <text x="778" y="800" fill="#a1a1aa" font-family="Microsoft YaHei, sans-serif" font-size="14">目前是单体等级成长，不是数据驱动 Upgrade 系统</text>
+  </g>
+  <path d="M670 745 H740" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

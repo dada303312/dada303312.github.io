@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#67e8f9"/></marker>
+    <filter id="s2"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#000" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1400" height="760" rx="30" fill="url(#bg2)"/>
+  <text x="70" y="78" fill="#f8fafc" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="36" font-weight="700">已经跑通的游戏闭环</text>
+  <text x="70" y="114" fill="#94a3b8" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="18">从移动、自动战斗到经验掉落和升级三选一，核心循环已经成立</text>
+  <g filter="url(#s2)">
+    <rect x="65" y="180" width="200" height="145" rx="20" fill="#1d4ed8"/><text x="165" y="235" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700">01 移动躲避</text><text x="165" y="272" text-anchor="middle" fill="#dbeafe" font-family="Microsoft YaHei, sans-serif" font-size="16">四方向移动</text><text x="165" y="298" text-anchor="middle" fill="#bfdbfe" font-family="Microsoft YaHei, sans-serif" font-size="15">Camera2D 平滑跟随</text>
+    <rect x="315" y="180" width="200" height="145" rx="20" fill="#7c3aed"/><text x="415" y="235" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700">02 自动瞄准</text><text x="415" y="272" text-anchor="middle" fill="#ede9fe" font-family="Microsoft YaHei, sans-serif" font-size="16">遍历 enemy 组</text><text x="415" y="298" text-anchor="middle" fill="#ddd6fe" font-family="Microsoft YaHei, sans-serif" font-size="15">选择最近目标</text>
+    <rect x="565" y="180" width="200" height="145" rx="20" fill="#ca8a04"/><text x="665" y="235" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700">03 子弹命中</text><text x="665" y="272" text-anchor="middle" fill="#fef9c3" font-family="Microsoft YaHei, sans-serif" font-size="16">伤害 + 击退</text><text x="665" y="298" text-anchor="middle" fill="#fde68a" font-family="Microsoft YaHei, sans-serif" font-size="15">3 秒后自动清理</text>
+    <rect x="815" y="180" width="200" height="145" rx="20" fill="#0f766e"/><text x="915" y="235" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700">04 击杀掉落</text><text x="915" y="272" text-anchor="middle" fill="#ccfbf1" font-family="Microsoft YaHei, sans-serif" font-size="16">敌人死亡生成宝石</text><text x="915" y="298" text-anchor="middle" fill="#99f6e4" font-family="Microsoft YaHei, sans-serif" font-size="15">伤害数字 / 闪白反馈</text>
+    <rect x="1065" y="180" width="270" height="145" rx="20" fill="#15803d"/><text x="1200" y="235" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700">05 拾取经验</text><text x="1200" y="272" text-anchor="middle" fill="#dcfce7" font-family="Microsoft YaHei, sans-serif" font-size="16">PickupArea / gem 组</text><text x="1200" y="298" text-anchor="middle" fill="#bbf7d0" font-family="Microsoft YaHei, sans-serif" font-size="15">每颗宝石 +1 XP</text>
+  </g>
+  <path d="M265 252 H305" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow2)"/><path d="M515 252 H555" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow2)"/><path d="M765 252 H805" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow2)"/><path d="M1015 252 H1055" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M1200 325 C1200 470 650 480 650 545" fill="none" stroke="#67e8f9" stroke-width="4" stroke-dasharray="11 8" marker-end="url(#arrow2)"/>
+  <g filter="url(#s2)">
+    <rect x="390" y="550" width="520" height="125" rx="20" fill="#6d28d9"/>
+    <text x="650" y="596" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="700">06 升级暂停 → 三选一强化</text>
+    <text x="650" y="630" text-anchor="middle" fill="#ede9fe" font-family="Microsoft YaHei, sans-serif" font-size="17">加速度 ×1.10　加伤害 ×1.15　加攻速：间隔 ×0.90</text>
+    <text x="650" y="656" text-anchor="middle" fill="#c4b5fd" font-family="Microsoft YaHei, sans-serif" font-size="15">选择后恢复游戏，回到第 01 步继续循环</text>
+  </g>
+  <path d="M390 612 C170 610 145 410 165 335" fill="none" stroke="#a78bfa" stroke-width="4" marker-end="url(#arrow2)"/>
+  <text x="188" y="450" fill="#c4b5fd" font-family="Microsoft YaHei, sans-serif" font-size="16" transform="rotate(-78 188 450)">循环继续</text>
+</svg>
